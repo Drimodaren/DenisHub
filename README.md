@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+Movie Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React + TypeScript project that fetches movies from the OMDb API.
+The app allows users to search, filter, and view movie details, as well as manage a list of favorite movies with drag-and-drop sorting.
 
-Currently, two official plugins are available:
+🚀 Tech Stack:
+	•	React (TypeScript, Functional Components, Hooks)
+	•	Vite (Fast build tool)
+	•	React Router (Navigation)
+	•	Redux Toolkit + localStorage (Favorites storage)
+	•	TailwindCSS (Styling)
+	•	Axios (Fetching OMDb API)
+	•	@hello-pangea/dnd (Drag & Drop for favorites)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  🔥 Features
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+✅ Infinite scrolling movie list (fetching paginated results from OMDb API)
+✅ Search bar with debounce (to avoid excessive API calls)
+✅ Filtering movies by year and genre
+✅ Movie details page with full information
+✅ User authentication (stored in localStorage, no backend required)
+✅ Favorites management – add/remove movies, persist in localStorage
+✅ Drag & Drop to reorder favorite movies between lists
+✅ Responsive design with TailwindCSS
